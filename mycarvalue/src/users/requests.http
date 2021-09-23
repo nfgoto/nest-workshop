@@ -1,0 +1,45 @@
+
+### create new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "test10@mail.com",
+    "password": "pass"
+}
+
+### signin user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test10@mail.com",
+    "password": "pass"
+}
+
+### signout user
+POST http://localhost:3000/auth/signout
+
+### get currently signed in user
+
+GET http://localhost:3000/auth/whoami
+
+### find a user
+GET  http://localhost:3000/auth/3
+
+### find all users with given email
+GET  http://localhost:3000/auth?email=test3@mail.com
+
+### update a user
+PATCH http://localhost:3000/auth/3
+Content-Type: application/json
+
+{
+    "password": "}}pass1**"
+}
+
+### delete a user
+DELETE http://localhost:3000/auth/10
+
+
+
