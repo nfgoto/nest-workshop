@@ -16,4 +16,8 @@ export class MessagesService {
   create(content: string) {
     return this.messagesRepository.create(content)
   }
+
+  edit(id: string, content: string) {
+    return this.messagesRepository.edit(id, content)
+  }
 }

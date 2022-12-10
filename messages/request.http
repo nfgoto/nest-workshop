@@ -9,6 +9,14 @@ Content-Type: application/json
     "content": "hola"
 }
 
+### edit message
+PUT http://127.0.0.1:3000/messages/746
+Content-Type: application/json
+
+{
+    "content": "hola de nuevo"
+}
+
 
 ### get a specific message
 GET http://127.0.0.1:3000/messages/746

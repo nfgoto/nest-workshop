@@ -26,4 +26,14 @@ export class MessagesRepository {
 
     await writeFile('messages.json', JSON.stringify(messages))
   }
+
+  async edit(id: string, content: string) {
+    const contents = await readFile('messages.json', 'utf-8');
+    const messages = contents ? JSON.parse(contents) : {};
+
+    messages[id] = { id, content };
+
+    await writeFile('messages.json', JSON.stringify(messages))
+  }
+
 }
