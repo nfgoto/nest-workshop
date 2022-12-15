@@ -6,7 +6,7 @@ import { MessagesService } from './messages.service';
 
 @Controller('messages')
 export class MessagesController {
-  constructor(protected messagesService: MessagesService) { }
+  constructor(private readonly messagesService: MessagesService) { }
 
   @Get()
   async listMessages() {
